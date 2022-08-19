@@ -1,0 +1,192 @@
+@font-face {
+  font-family: "Nunito Sans";
+  font-weight: 400;
+  font-style: normal;
+  src: url("../Fonts/NunitoSans-Regular.ttf");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../Fonts/NunitoSans-SemiBold.ttf");
+}
+@font-face {
+  font-family: "Nunito Sans";
+  font-weight: 700;
+  font-style: normal;
+  src: url("../Fonts/NunitoSans-Bold.ttf");
+}
+
+body {
+  font-family: "Nunito Sans", "Arial", sans-serif;
+  background-color: #f2f2f2;
+}
+.mode-opener {
+  background-color: rgba(32, 44, 54, 1);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.header {
+  padding: 23px 0 24px 0;
+  background-color: #ffff;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.0562443);
+}
+.mode-opener .header {
+  background-color: rgba(43, 56, 68, 1);
+}
+
+.header_inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.logo {
+  text-decoration: none;
+}
+.white_logo {
+  display: none;
+}
+.mobile_logo {
+  display: none;
+}
+.mobile_logo_white {
+  display: none;
+}
+.mode-opener .black_logo {
+  display: none;
+}
+.mode-opener .white_logo {
+  display: block;
+}
+.white-moon {
+  display: none;
+}
+.mode {
+  display: flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 22px;
+  color: #111517;
+}
+.mode-opener .mode {
+  color: #fff;
+}
+.mode-opener .black-moon {
+  display: none;
+}
+.mode-opener .white-moon {
+  display: block;
+}
+/* hero part */
+.search_box {
+  padding-top: 48px;
+}
+
+.mode-opener .search-input {
+  background-color: rgba(43, 56, 68, 1);
+  border: none;
+}
+.search-input::placeholder {
+  padding-left: 40px;
+}
+.search-label {
+  position: relative;
+}
+.search-label::before {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url("../1-lesson_img/icon-search-black.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  position: absolute;
+  top: 12px;
+  left: 28px;
+}
+
+.mode-opener .search-label::before {
+  background-image: url("../1-lesson_img/icon-search-white.svg");
+}
+.mode-opener .search-input::placeholder {
+  padding: 30px;
+  color: #fff;
+}
+.mode-opener .select-input {
+  padding: 8px;
+  border: none;
+  background-color: rgba(43, 56, 68, 1);
+  color: #fff;
+}
+.mode-opener .select-input {
+  color: white;
+}
+/* hero part */
+.hero {
+  padding-top: 48px;
+}
+.card_link {
+  text-decoration: none;
+}
+.card-title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
+  color: #111517;
+}
+.mode-opener .card-title {
+  color: #fff;
+}
+.card-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #111517;
+}
+.mode-opener .card-text {
+  color: #fff;
+}
+.mode-opener .card-item {
+  background-color: #2b3844;
+}
+
+@media only screen and (max-width: 576px) {
+  .black_logo {
+    display: none;
+  }
+  .mobile_logo {
+    display: block;
+  }
+  .mode {
+    font-size: 12px;
+  }
+  .mode-opener .white_logo {
+    display: none;
+  }
+  .mode-opener .mobile_logo {
+    display: none;
+  }
+  .mode-opener .mobile_logo_white {
+    display: block;
+  }
+  .form-search {
+    flex-direction: column;
+  }
+  .search-input {
+    width: 342px !important;
+  }
+  .select-input {
+    margin-top: 40px;
+    width: 200px !important;
+  }
+  .hero_item {
+    /* padding-left: 50px; */
+    /* / margin: 0 auto !important; */
+  }
+}
