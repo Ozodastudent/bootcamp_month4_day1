@@ -94,37 +94,24 @@ body {
   border: none;
 }
 .search-input::placeholder {
-  padding-left: 40px;
+  padding-left: 10px;
 }
+
 .search-label {
   position: relative;
 }
-.search-label::before {
-  content: "";
-  width: 18px;
-  height: 18px;
-  background-image: url("../1-lesson_img/icon-search-black.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  top: 12px;
-  left: 28px;
-}
 
-.mode-opener .search-label::before {
-  background-image: url("../1-lesson_img/icon-search-white.svg");
-}
 .mode-opener .search-input::placeholder {
   padding: 30px;
   color: #fff;
 }
-.mode-opener .select-input {
+.mode-opener .select_element {
   padding: 8px;
   border: none;
   background-color: rgba(43, 56, 68, 1);
   color: #fff;
 }
-.mode-opener .select-input {
+.mode-opener .select_element {
   color: white;
 }
 /* hero part */
@@ -134,13 +121,13 @@ body {
 .card_link {
   text-decoration: none;
 }
-.card-title {
+.card_title {
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
   color: #111517;
 }
-.mode-opener .card-title {
+.mode-opener .card_title {
   color: #fff;
 }
 .card-text {
@@ -152,10 +139,31 @@ body {
 .mode-opener .card-text {
   color: #fff;
 }
+.mode-opener .more_info_btn {
+  color: #fff;
+  border: 1px solid white;
+  background-color: #2b3844;
+}
 .mode-opener .card-item {
   background-color: #2b3844;
 }
+.card-item {
+  padding-bottom: 20px;
+}
+.more_info_btn {
+  margin-left: 15px;
+  padding: 5px 10px;
+  width: 90px;
+  background-color: white;
+  border: 1px solid rgb(85, 81, 81);
+  color: #111517;
 
+  border-radius: 10px;
+}
+.country_img {
+  width: 262px;
+  height: 160px;
+}
 @media only screen and (max-width: 576px) {
   .black_logo {
     display: none;
@@ -178,15 +186,40 @@ body {
   .form-search {
     flex-direction: column;
   }
-  .search-input {
-    width: 342px !important;
-  }
-  .select-input {
+
+  .select_element {
     margin-top: 40px;
-    width: 200px !important;
   }
-  .hero_item {
-    /* padding-left: 50px; */
-    /* / margin: 0 auto !important; */
-  }
+}
+
+/* about page part */
+.about {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  padding-right: 30px;
+}
+.back_link {
+  padding: 8px 20px;
+  background-color: white;
+  border-radius: 5px;
+}
+.about_card {
+  margin-top: 60px;
+}
+.about_card_img {
+  border-radius: 7px;
+}
+.about_card_right {
+  width: 100%;
+  max-width: 600px;
+}
+.about_desc {
+  font-weight: 300;
+}
+.modal_info {
+  font-size: 16px;
+}
+.mode-opener .modal_info {
+  background-color: #2b3844;
+  color: #fff;
 }

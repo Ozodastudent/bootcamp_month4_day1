@@ -5,11 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>1-lesson</title>
-    <link rel="stylesheet" href="./css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body class="body-box">
     <header class="header">
@@ -56,13 +57,10 @@
         <div class="container container-md container-sm">
           <div class="search_inner">
             <form
-              class="row justify-content-between form-search"
+              class="country_form row justify-content-between form-search row"
               method="post"
-              autocomplete="off"
             >
-              <label
-                class="col-5 col-lg-6 col-md-6 col-sm-12 form-label search-label"
-              >
+              <label class="col-8 col-md-6 col-lg-6 form-label search-label">
                 <input
                   class="form-control p-2 search-input"
                   type="search"
@@ -70,8 +68,8 @@
                   placeholder="Search for a country…"
                 />
               </label>
-              <div class="col-2 col-lg-3 col-md-3 col-sm-6">
-                <select name="select" class="form-select select-input">
+              <div class="col-6 col-md-3 col-lg-3">
+                <select name="select" class="form-select select_element">
                   <option value="selected" disabled selected>Select</option>
                   <option value="Africa">Africa</option>
                   <option value="America">America</option>
@@ -87,202 +85,117 @@
       <section class="hero">
         <div class="container container-md container-sm">
           <div class="hero_inner">
-            <ul class="row g-5 hero-item justify-content-around">
-              <li
-                class="card card-item col-3 col-lg-4 col-md-4 col-sm-12 p-0"
-                style="width: 264px"
-              >
-                <a href="#" class="card_link row">
-                  <div class="col-12">
-                    <img
-                      src="./1-lesson_img/germn.png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title mb-4">Germany</h4>
-                      <p class="card-text">
-                        <strong>Population</strong> : 81,770,900
-                      </p>
-                      <p class="card-text"><strong>Region</strong> : Europe</p>
-                      <p class="card-text"><strong>Capital</strong> : Berlin</p>
+            <ul class="country_list row g-5 justify-content-around"></ul>
+          </div>
+
+          <!-- Modal -->
+          <div
+            class="modal fade"
+            id="countryModal"
+            tabindex="-1"
+            aria-labelledby="countryModalLabel"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog modal-xl">
+              <div class="modal-content modal_info">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="about">
+                  <div class="container">
+                    <div class="about_inner">
+                      <div class="about_info"></div>
                     </div>
                   </div>
-                </a>
-              </li>
-              <li
-                class="card card-item col-3 col-lg-4 col-md-4 col-sm-12 p-0"
-                style="width: 264px"
-              >
-                <a href="#" class="card_link row">
-                  <div class="col-12">
-                    <img
-                      src="./1-lesson_img/us.png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title mb-4">United States of America</h4>
-                      <p class="card-text">
-                        <strong>Population</strong> : <span>323,947,000</span>
-                      </p>
-                      <p class="card-text">
-                        <strong>Region</strong> : Americas
-                      </p>
-                      <p class="card-text">
-                        <strong>Capital</strong>: Washington, D.C.
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li
-                class="card card-item col-3 col-lg-4 col-md-4 col-sm-12 p-0"
-                style="width: 264px"
-              >
-                <a href="#" class="card_link row">
-                  <div class="col-12">
-                    <img
-                      src="./1-lesson_img/brazil.png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title mb-4">Brazil</h4>
-                      <p class="card-text">
-                        <strong>Population</strong>: <span> 206,135,893</span>
-                      </p>
-                      <p class="card-text">
-                        <strong>Region</strong> : Americas
-                      </p>
-                      <p class="card-text">
-                        <strong>Capital</strong>: Brasília
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li
-                class="card card-item col-3 col-lg-4 col-md-4 col-sm-12 p-0"
-                style="width: 264px"
-              >
-                <a href="#" class="card_link row">
-                  <div class="col-12">
-                    <img
-                      src="./1-lesson_img/iceland.png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title mb-4">Iceland</h4>
-                      <p class="card-text">
-                        <strong> Population:</strong> <span>334,300</span>
-                      </p>
-                      <p class="card-text"><strong>Region</strong> : Europe</p>
-                      <p class="card-text">
-                        <strong>Capital</strong>: Reykjavík
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li
-                class="card card-item col-3 col-lg-4 col-md-4 col-sm-12 p-0"
-                style="width: 264px"
-              >
-                <a href="#" class="card_link row">
-                  <div class="col-12">
-                    <img
-                      src="./1-lesson_img/afgan.png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title mb-4">Afghanistan</h4>
-                      <p class="card-text">
-                        <strong>Population</strong>: 27,657,145
-                      </p>
-                      <p class="card-text"><strong>Region</strong> : Asia</p>
-                      <p class="card-text"><strong>Capital</strong>: Kabul</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li
-                class="card card-item col-3 col-lg-4 col-md-4 col-sm-12 p-0"
-                style="width: 264px"
-              >
-                <a href="#" class="card_link row">
-                  <div class="col-12">
-                    <img
-                      src="./1-lesson_img/aland.png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title mb-4">Åland Islands</h4>
-                      <p class="card-text">
-                        <strong>Population</strong>: 28,875
-                      </p>
-                      <p class="card-text"><strong>Region</strong> : Europe</p>
-                      <p class="card-text">
-                        <strong>Capital</strong>: Mariehamn
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li
-                class="card card-item col-3 col-lg-4 col-md-4 col-sm-12 p-0"
-                style="width: 264px"
-              >
-                <a href="#" class="card_link row">
-                  <div class="col-12">
-                    <img
-                      src="./1-lesson_img/albania.png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title mb-4">Albania</h4>
-                      <p class="card-text">
-                        <strong>Population</strong>: 2,886,026
-                      </p>
-                      <p class="card-text"><strong>Region</strong> : Europe</p>
-                      <p class="card-text"><strong>Capital</strong> : Tirana</p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-              <li
-                class="card card-item col-3 col-lg-4 col-md-4 col-sm-12 p-0"
-                style="width: 264px"
-              >
-                <a href="#" class="card_link row">
-                  <div class="col-12">
-                    <img
-                      src="./1-lesson_img/algeria.png"
-                      class="card-img-top"
-                      alt="..."
-                    />
-                    <div class="card-body">
-                      <h4 class="card-title mb-4">Algeria</h4>
-                      <p class="card-text">
-                        <strong>Population</strong>: 40,400,000
-                      </p>
-                      <p class="card-text"><strong>Region</strong> : Africa</p>
-                      <p class="card-text">
-                        <strong>Capital</strong> : Algiers
-                      </p>
-                    </div>
-                  </div>
-                </a>
-              </li>
-            </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
     </main>
+
+    <template class="country_template">
+      <div
+        data-aos="fade-up"
+        data-aos-anchor-placement="top-center"
+        class="col-12 col-sm-6 col-lg-4 col-xl-3"
+      >
+        <li class="card card-item shadow" style="width: 264px">
+          <a href="#" class="card_link">
+            <img src="" class="card-img-top country_img" alt="..." />
+            <div class="card-body">
+              <h4 class="card_title mb-4"></h4>
+              <p class="card-text">
+                Population: <span class="population_text"></span>
+              </p>
+              <p class="card-text">Region: <span class="region_text"></span></p>
+              <p class="card-text">
+                Capital: <span class="capital_text"></span>
+              </p>
+            </div>
+            <a
+              data-bs-toggle="modal"
+              data-bs-target="#countryModal"
+              href=""
+              class="more_info_btn text-decoration-none"
+              >More...</a
+            >
+          </a>
+        </li>
+      </div>
+    </template>
+
+    <template class="info_template">
+      <div class="about_card d-flex flex-column flex-lg-row">
+        <div class="about_card_left me-5">
+          <img class="about_card_img" width="550" height="350" src="" alt="" />
+        </div>
+        <div class="about_card_right ms-5">
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex flex-column">
+              <h2 class="about_name mb-4"></h2>
+              <strong
+                >Native Name: <span class="about_native_name about_desc"></span
+              ></strong>
+              <strong class="my-1">
+                Population:
+                <span class="about_population about_desc"></span>
+              </strong>
+              <strong
+                >Region: <span class="about_region about_desc"></span
+              ></strong>
+              <strong class="my-1"
+                >Subregion: <span class="about_subregion about_desc"></span
+              ></strong>
+              <strong
+                >Capital: <span class="about_capital about_desc"></span
+              ></strong>
+            </div>
+            <div class="d-flex flex-column">
+              <strong>Area: <span class="about_area about_desc"></span></strong>
+            </div>
+          </div>
+          <div class="mt-5">
+            <strong
+              >Borders : <span class="about_borders about_desc"></span
+            ></strong>
+          </div>
+        </div>
+      </div>
+    </template>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="//code.jivosite.com/widget/ivaYgIK4nT" async></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
